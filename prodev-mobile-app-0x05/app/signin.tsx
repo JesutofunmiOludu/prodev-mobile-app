@@ -1,5 +1,5 @@
 import { View, Text, TextInput, TouchableOpacity, Image, ScrollView } from "react-native";
-import { styles } from "@/styles/_join";
+import { styles } from "@/styles/_joinstyle";
 import { HEROLOGOGREEN, GOOGLELOGO, FACEBOOKLOGO } from "@/constants";
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
@@ -55,7 +55,10 @@ export default function SignIn() {
           <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
         </View>
 
-        <TouchableOpacity style={styles.primaryButton}>
+        <TouchableOpacity 
+          style={styles.primaryButton}
+          onPress={() => router.push("/(home)")}
+        >
           <Text style={styles.buttonText}>Sign In</Text>
         </TouchableOpacity>
       </View>
